@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Feedback - FormFill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>FormFill</h1>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Send Your Message</h2>
+                        <p class="form-subtitle" id="formSubtitle">We'd love to hear from you! Share your thoughts, questions, or feedback.</p>
+                    </div>
+
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required placeholder="Share your feedback, questions, or thoughts..." rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+
+                    <div class="form-footer">
+                        <p>Powered by <strong>FormFill</strong> - Create your own form at <a href="index.html">formfill.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>✅ Message Sent Successfully!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your feedback! You should receive a confirmation email shortly.</p>
+                <button id="closeModal" class="btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorModal" class="modal" style="display: none;">
+        <div class="modal-content error">
+            <div class="modal-header">
+                <h3>❌ Something Went Wrong</h3>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage">There was an error sending your message. Please try again.</p>
+                <button id="closeErrorModal" class="btn-primary">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
